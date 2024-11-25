@@ -73,6 +73,7 @@ export function StepsForm({
                                 )}
                             </div>
                             <AddStepButton
+                                className="float-end"
                                 onAddStep={(newStep) => {
                                     field.onChange([...field.value, newStep]);
                                 }}

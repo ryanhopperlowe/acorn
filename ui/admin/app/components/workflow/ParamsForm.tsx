@@ -115,7 +115,7 @@ export function ParamsForm({
                 ))}
 
                 <Button
-                    variant="secondary"
+                    variant="ghost"
                     className="self-end"
                     startContent={<PlusIcon />}
                     onClick={() =>

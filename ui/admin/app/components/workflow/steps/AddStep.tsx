@@ -28,9 +28,10 @@ type StepType = "regular" | "if" | "while" | "template";
 
 interface AddStepButtonProps {
     onAddStep: (newStep: Step) => void;
+    className?: string;
 }
 
-export function AddStepButton({ onAddStep }: AddStepButtonProps) {
+export function AddStepButton({ onAddStep, className }: AddStepButtonProps) {
     const [open, setOpen] = useState(false);
     const [isTemplateModalOpen, setIsTemplateModalOpen] = useState(false);
 
@@ -91,7 +92,7 @@ export function AddStepButton({ onAddStep }: AddStepButtonProps) {
         <>
             <Popover open={open} onOpenChange={setOpen}>
                 <PopoverTrigger asChild>
-                    <Button variant="secondary">
+                    <Button variant="ghost" className={className}>
                         <Plus className="w-4 h-4 mr-2" /> Add
                     </Button>
                 </PopoverTrigger>
