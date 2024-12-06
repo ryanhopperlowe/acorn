@@ -223,6 +223,7 @@ export function ModelProviderForm({
                                             )}
                                             control={form.control}
                                             name={`requiredConfigParams.${i}.value`}
+                                            type="password"
                                             classNames={{
                                                 wrapper:
                                                     "flex-auto bg-background",
@@ -265,6 +266,7 @@ export function ModelProviderForm({
                         : null}
                 </div>
                 <NameDescriptionForm
+                    descriptionFieldProps={{ type: "password" }}
                     defaultValues={form.watch("additionalConfirmParams")}
                     onChange={(values) =>
                         form.setValue("additionalConfirmParams", values)
